@@ -324,6 +324,62 @@ dialog::backdrop{background:rgba(8,10,20,.55)}
 .roadmap b{display:block;font-size:14.5px}
 .roadmap p{font-size:13px;color:var(--muted);margin-top:2px}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001s!important;transition-duration:.001s!important}}
+
+/* ============ phones & small tablets ============ */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden}
+@media (max-width:860px){
+  #app{grid-template-columns:0 minmax(0,1fr)}
+  .bar,.work{min-width:0}
+  .bar{padding:0 12px;gap:8px;height:56px}
+  .bar .vt{flex:1;min-width:0;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .bar .sp{display:none}
+  .work{-webkit-overflow-scrolling:touch}
+  .tcard:hover,.lg-acc:hover{transform:none}
+}
+@media (max-width:560px){
+  /* 16px stops iOS zooming into a field on focus */
+  input,select,textarea,.fld input,.fl input,.fl select,.fl textarea,.ai-f textarea,.bar .srch input{font-size:16px}
+  #btnNew{width:36px;padding:0;justify-content:center}
+  #btnNew span{display:none}
+  .langbtn{padding:0 10px;font-size:13px}
+  .who{padding:3px!important}
+  .work{padding:14px 12px 90px;gap:14px}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .g3,.g2{grid-template-columns:minmax(0,1fr)}
+  .kpi{padding:12px 13px}
+  .kpi .nm{font-size:25px}
+  .kpi .lb{font-size:12.5px}
+  .card-h{padding:12px 13px}
+  .card-b{padding:12px 13px}
+  th,td{padding:10px 11px;font-size:13.5px}
+  .trial{padding:10px 12px;font-size:13px}
+  .pnode{min-width:150px}
+  .kb{grid-auto-columns:min(290px,82vw);scroll-snap-type:x mandatory;margin-inline:-12px;padding-inline:12px;scroll-padding-inline:12px}
+  .kcol{scroll-snap-align:start}
+  .appr{padding:12px}
+  .appr .mn{min-width:0;flex-basis:100%}
+  .appr .acts{width:100%}
+  .appr .acts .btn{flex:1 1 auto;justify-content:center;white-space:normal;text-align:center}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .sheet{width:100%;border-inline-start:0}
+  .sh-h,.sec{padding-inline:15px}
+  .mdf{padding:14px 15px;flex-wrap:wrap}
+  .mdf .btn{flex:1 1 auto;justify-content:center}
+  .modal{width:calc(100% - 20px)}
+  .fab{inset-block-end:16px;inset-inline-end:16px;width:52px;height:52px}
+  .toast{inset-block-end:84px}
+  #ai{width:100%;border-inline-start:0}
+  .msg{max-width:92%}
+  .lg-pane{align-items:flex-start;padding:22px 18px 32px}
+  .lg-card>h2{font-size:24px}
+}
+@media (max-width:360px){
+  .g4{grid-template-columns:minmax(0,1fr)}
+  .bar{gap:6px;padding:0 10px}
+}
 </style>
 </head>
 <body>
